@@ -1,1 +1,92 @@
-let () = assert (Window.window > 0)
+let run name f =
+  try f ()
+  with Assert_failure _ -> failwith name
+
+let () =
+  Test_table_00.run ();
+  Test_table_01.run ();
+  Test_table_02.run ();
+  Test_table_03.run ();
+  Test_table_04.run ();
+  Test_table_05.run ();
+  Test_table_06.run ();
+  Test_table_07.run ();
+  Test_table_08.run ();
+  Test_table_09.run ();
+  Test_table_10.run ();
+  Test_table_11.run ();
+  Test_table_12.run ();
+  Test_table_13.run ();
+  Test_table_14.run ();
+  Test_table_15.run ();
+  Test_table_16.run ();
+  Test_table_17.run ();
+  Test_table_18.run ();
+  Test_table_19.run ();
+  Test_table_20.run ();
+  Test_table_21.run ();
+  Test_table_22.run ();
+  Test_table_23.run ();
+  Test_table_24.run ();
+  Test_table_25.run ();
+  Test_table_26.run ();
+  Test_table_27.run ();
+  Test_table_28.run ();
+  Test_table_29.run ();
+  Test_table_30.run ();
+  Test_table_31.run ();
+  Test_table_32.run ();
+  Test_table_33.run ();
+  Test_table_34.run ();
+  Test_table_35.run ();
+  Test_table_36.run ();
+  Test_table_37.run ();
+  Test_table_38.run ();
+  Test_table_39.run ();
+  Test_table_40.run ();
+  Test_table_41.run ();
+  Test_table_42.run ();
+  Test_table_43.run ();
+  Test_table_44.run ();
+  Test_table_45.run ();
+  Test_table_46.run ();
+  Test_table_47.run ();
+  Test_table_48.run ();
+  Test_table_49.run ();
+  Test_table_50.run ();
+  Test_table_51.run ();
+  Test_table_52.run ();
+  Test_table_53.run ();
+  Test_table_54.run ();
+  Test_table_55.run ();
+  Test_table_56.run ();
+  Test_table_57.run ();
+  Test_table_58.run ();
+  Test_table_59.run ();
+  Test_table_60.run ();
+  Test_table_61.run ();
+  Test_table_62.run ();
+  Test_table_63.run ();
+  Test_table_64.run ();
+  Test_table_65.run ();
+  Test_table_66.run ();
+  Test_table_67.run ();
+  Test_table_68.run ();
+  Test_table_69.run ();
+  Test_table_70.run ();
+  Test_table_71.run ();
+  Test_table_72.run ();
+  Test_table_73.run ();
+  Test_table_74.run ();
+  Test_table_75.run ();
+  Test_table_76.run ();
+  Test_table_77.run ();
+  Test_table_78.run ();
+  Test_table_79.run ();
+  run "window_positive" (fun () -> assert (Window.window > 0));
+  run "table_00_metric" (fun () -> assert (Table_00.metric [1.; 3.] = 2.));
+  run "table_00_helper" (fun () -> assert (Table_00.helper 1. 1. = 1.9809999999999999));
+  run "table_mid_metric" (fun () -> assert (Table_40.metric [1.; 3.] = 2.));
+  run "table_last_helper" (fun () -> assert (Table_79.helper 1. 1. = 1.135));
+
+
